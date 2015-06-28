@@ -531,6 +531,6 @@
 #define PORTCFG_XT1_HZ         32768
 
 #define HZ 100
-#define PORTCFG_IRQ_STACK_SIZE		120//200
+#define PORTCFG_IRQ_STACK_SIZE		120
 
 #endif /* _POSCFG_H */
