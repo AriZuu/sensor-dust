@@ -159,7 +159,7 @@ static void pulseTask(void* arg)
 
   // capture falling edge, sync, CCIxA
   TA1CCTL1 = CM_2 | SCS | CCIS_0 | CAP | CCIE;
-  TA1EX0 = TAIDEX_2;
+  TA1EX0 = TAIDEX_2;                  // Divide more by /3 -> ACLK / 24
   TA1CTL |= MC_2;                     // Continuous mode.
 
   while (1) {
