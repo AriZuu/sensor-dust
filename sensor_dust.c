@@ -303,9 +303,9 @@ static void readSensors()
   posMutexUnlock(pulseMutex);
 
   // Calculate pulse ratio. It correlates to detected particle amount.
-  ratio = (int)(100.0 * down / total);
+  ratio = (int)(10000.0 * down / total);
 
-  nosPrintf("Downratio %u", ratio);
+  nosPrintf("Downratio %d.%d", ratio / 100, ratio % 100);
   saveData(0, SENSOR_PULSES, ratio);
 }
 
