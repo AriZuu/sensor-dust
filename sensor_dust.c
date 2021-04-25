@@ -59,7 +59,12 @@
 /*
  * Radio calibration data is in info D segment,
  */
+#if __GNUC__ == 4
 extern int __infod[];
+#else
+int* __infod = 0x1800;
+#endif
+
 unsigned char rf_freqoffset;
 
 static POSSEMA_t adcSem;

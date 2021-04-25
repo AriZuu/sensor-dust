@@ -34,8 +34,9 @@ PORT = msp430
 # This is for Olimex MSP430-CCRF card
 #
 MCU ?= cc430f5137 
+COMPILER=GCC
 
-BUILD ?= DEBUG
+BUILD ?= RELEASE
 RADIO=MRFI_CC430
 TEXAS_CONF=../sensor-ap/texas_ccrf
 
